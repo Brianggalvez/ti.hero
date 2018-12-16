@@ -17,8 +17,8 @@ public extension TiWindowProxy
      If true, Hero will search through all the subviews for heroIds and modifiers. Defaults to true
      */
     override public var tiheroEnabled: Bool {
-        get { return self.windowHoldingController().hero.isEnabled; }
-        set { self.windowHoldingController().hero.isEnabled = true;
+        get { return self.hostingController().hero.isEnabled; }
+        set { self.hostingController().hero.isEnabled = true;
             self.replaceValue(true, forKey: "tiheroEnabled", notification: false) }
     }
     

@@ -1,39 +1,10 @@
-// This is a test harness for your module
-// You should do something interesting in this harness
-// to test out the module and to provide instructions
-// to users on how to use it by example.
+var Hero = require('ti.hero');
 
-
-// open a single window
 var win = Ti.UI.createWindow({
-	backgroundColor:'white'
+	backgroundColor: 'white'
 });
-var label = Ti.UI.createLabel();
+var label = Ti.UI.createLabel({
+	text: 'click me'
+});
 win.add(label);
 win.open();
-
-// TODO: write your module tests here
-var ti_hero = require('ti.hero');
-Ti.API.info("module is => " + ti_hero);
-
-label.text = ti_hero.example();
-
-Ti.API.info("module exampleProp is => " + ti_hero.exampleProp);
-ti_hero.exampleProp = "This is a test value";
-
-if (Ti.Platform.name == "android") {
-	var proxy = ti_hero.createExample({
-		message: "Creating an example Proxy",
-		backgroundColor: "red",
-		width: 100,
-		height: 100,
-		top: 100,
-		left: 150
-	});
-
-	proxy.printMessage("Hello world!");
-	proxy.message = "Hi world!.  It's me again.";
-	proxy.printMessage("Hello world!");
-	win.add(proxy);
-}
-
