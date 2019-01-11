@@ -11,17 +11,20 @@ import Hero
 
 public extension TiViewProxy
 {
-    public var tiheroID: String? {
-        get {  debugPrint("get id"); return self.view.hero.id;}
-        set {debugPrint("set id"); self.view.hero.id = newValue; self.replaceValue(newValue, forKey: "tiheroID", notification: false)}
-    }
-    /**
-     **isEnabled** allows to specify whether a view and its subviews should be consider for animations.
-     If true, Hero will search through all the subviews for heroIds and modifiers. Defaults to true
-     */
-    public var tiheroEnabled: Bool {
-        get {  return self.view.hero.isEnabled; }
-        set  { self.view.hero.isEnabled = newValue; self.replaceValue(newValue, forKey: "tiheroEnabled", notification: false) }
+    //TODO move to Proxy
+    @objc(hero)
+    public var hero : Dictionary<String, Any> {
+        get{
+            return self.value(forUndefinedKey: "hero") as! Dictionary<String, Any>
+        }
+        set {
+            NSLog("setting hero in TiViewProxy %@",newValue)
+            let id = newValue["id"]
+            if(id != nil)
+            { self.view.hero.id=id as! String}
+            self.replaceValue(newValue, forKey: "hero", notification: false)
+            
+        }
     }
 
 }

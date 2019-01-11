@@ -11,6 +11,7 @@ import UIKit
 import TitaniumKit
 
 
+
 /**
  
  Titanium Swift Module Requirements
@@ -39,6 +40,8 @@ class TiHeroModule: TiModule {
   override func startup() {
     super.startup()
     print("[INFO] loaded")
-  }
-
+    }
+    
+    
 }
+

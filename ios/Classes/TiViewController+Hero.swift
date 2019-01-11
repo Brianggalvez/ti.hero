@@ -4,22 +4,50 @@
 //
 //  Created by Brian García on 13/12/2018.
 //
-
 import Foundation
 import TitaniumKit
 import Hero
 
-
 public extension TiWindowProxy
 {
-    /**
-     **isEnabled** allows to specify whether a view and its subviews should be consider for animations.
-     If true, Hero will search through all the subviews for heroIds and modifiers. Defaults to true
-     */
-    override public var tiheroEnabled: Bool {
-        get { return self.hostingController().hero.isEnabled; }
-        set { self.hostingController().hero.isEnabled = true;
-            self.replaceValue(true, forKey: "tiheroEnabled", notification: false) }
+    //TODO move to Proxy
+    @objc(hero)
+   override public var hero : Dictionary<String, Any> {
+        get{
+            return self.value(forUndefinedKey: "hero") as! Dictionary<String, Any>
+        }
+        set {
+            // enabling hero in navigationWindowController through child win until the header can be imported
+            NSLog("setting hero in TiWindowProxy %@",newValue)
+            if((self.hostingController().navigationController) != nil){
+                self.hostingController().navigationController?.hero.isEnabled=true;
+                self.hostingController().navigationController?.hero.navigationAnimationType = .selectBy(presenting:.zoom, dismissing:.zoomOut)
+            }else
+            { NSLog("set modal in setter %@",self.hostingController());
+                self.hostingController().hero.isEnabled = true;
+                //self.hostingController().hero.modalAnimationType = .selectBy(presenting:.fade, dismissing:.zoomOut)
+            }
+            self.replaceValue(newValue, forKey: "hero", notification: false)
+            
+        }
     }
     
 }
+
+/*public extension TiUINavigationWindowProxy
+{
+    //TODO move to Proxy
+    @objc(hero)
+    override public var hero : Dictionary<String, Any> {
+        get{
+            return self.value(forUndefinedKey: "hero") as! Dictionary<String, Any>
+        }
+        set {
+            self.replaceValue(newValue, forKey: "hero", notification: false)
+            
+        }
+    }
+    
+}*/
+
+
