@@ -21,7 +21,7 @@ public extension TiWindowProxy
             NSLog("setting hero in TiWindowProxy %@",newValue)
             if((self.hostingController().navigationController) != nil){
                 self.hostingController().navigationController?.hero.isEnabled=true;
-                self.hostingController().navigationController?.hero.navigationAnimationType = .selectBy(presenting:.zoom, dismissing:.zoomOut)
+                self.hostingController().navigationController?.hero.navigationAnimationType = .selectBy(presenting:.fade, dismissing:.fade)
             }else
             { NSLog("set modal in setter %@",self.hostingController());
                 self.hostingController().hero.isEnabled = true;
