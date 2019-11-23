@@ -15,4 +15,4 @@ name: ti.hero
 moduleid: ti.hero
 guid: 483c6ba8-629d-46b1-8270-7589a3232dbc
 platform: iphone
-minsdk: 8.0.0.v20190104153150
+minsdk: 8.2.1.GA
