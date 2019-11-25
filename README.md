@@ -10,10 +10,12 @@ currentWin.hero = { enabled:true };
 nav.openWindow(newWin);
 ```
 
+# Current state
+works with all windows
 
 
 ## With Hero
-![alt text](documentation/with-hero.gif "With Hero") ![alt text](documentation/navigation-with-hero.gif "With Hero Navigation")
+![alt text](documentation/with-hero.gif "Modal window") ![alt text](documentation/navigation-with-hero.gif "NavigationWindow")
 
 ## Without Hero
-![alt text](documentation/without-hero.gif "Without Hero") ![alt text](documentation/navigation-without-hero.gif "Without Hero Navigation") 
+![alt text](documentation/without-hero.gif "Modal window") ![alt text](documentation/navigation-without-hero.gif "NavigationWindow") 
