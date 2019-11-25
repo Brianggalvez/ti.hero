@@ -19,12 +19,17 @@ public extension TiWindowProxy
         set {
             // enabling hero in navigationWindowController through child win until the header can be imported
             NSLog("setting hero in TiWindowProxy %@",newValue)
+            let enabled = newValue["enabled"];
             if((self.hostingController().navigationController) != nil){
-                self.hostingController().navigationController?.hero.isEnabled=true;
+                if (enabled != nil) {
+                    self.hostingController().navigationController?.hero.isEnabled = enabled  as! Bool;
+                }
                 self.hostingController().navigationController?.hero.navigationAnimationType = .selectBy(presenting:.fade, dismissing:.fade)
-            }else
-            { NSLog("set modal in setter %@",self.hostingController());
-                self.hostingController().hero.isEnabled = true;
+            } else {
+                NSLog("set modal in setter %@",self.hostingController());
+                if (enabled != nil) {
+                    self.hostingController().hero.isEnabled = enabled  as! Bool;
+                }
                 //self.hostingController().hero.modalAnimationType = .selectBy(presenting:.fade, dismissing:.zoomOut)
             }
             self.replaceValue(newValue, forKey: "hero", notification: false)

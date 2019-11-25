@@ -20,8 +20,13 @@ public extension TiViewProxy
         set {
             NSLog("setting hero in TiViewProxy %@",newValue)
             let id = newValue["id"]
-            if(id != nil)
-            { self.view.hero.id=id as! String}
+            if (id != nil) {
+                self.view.hero.id = id as! String;
+            }
+            let enabled = newValue["enabled"]
+            if (enabled != nil) {
+                self.view.hero.isEnabled = enabled as! Bool;
+            }
             self.replaceValue(newValue, forKey: "hero", notification: false)
             
         }
