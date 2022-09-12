@@ -12,7 +12,7 @@ public extension TiWindowProxy
 {
     //TODO move to Proxy
     @objc(hero)
-   override public var hero : Dictionary<String, Any> {
+    override var hero : Dictionary<String, Any> {
         get{
             return self.value(forUndefinedKey: "hero") as! Dictionary<String, Any>
         }

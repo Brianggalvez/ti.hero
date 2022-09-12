@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D33EEEF221C0F2A7006D3956 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33EEEF121C0F2A7006D3956 /* Hero.framework */; };
+		3AB19B6328CF1E3800FA8E9D /* Hero.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB19B6228CF1E3800FA8E9D /* Hero.xcframework */; };
+		3AB19B6528CF1E9600FA8E9D /* TitaniumKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB19B6428CF1E9600FA8E9D /* TitaniumKit.xcframework */; };
 		D34C63CB21C27789003EC011 /* TiUIView+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34C63CA21C27789003EC011 /* TiUIView+Hero.swift */; };
 		D3F7A38021C52EB60096EE1E /* TiViewController+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7A37F21C52EB60096EE1E /* TiViewController+Hero.swift */; };
 		DB34CDE0207B998A005F8E8C /* TiHeroModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = DB34CDDE207B998A005F8E8C /* TiHeroModuleAssets.m */; };
@@ -16,11 +17,11 @@
 		DB52E2401E9CCF8D00AAAEE0 /* TiHero_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = DB52E23F1E9CCF8D00AAAEE0 /* TiHero_Prefix.pch */; };
 		DB52E2431E9CD0F800AAAEE0 /* TiHeroModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB52E2421E9CD0F800AAAEE0 /* TiHeroModule.swift */; };
 		DB75E5161E9CD59000809B2D /* TiHero.h in Headers */ = {isa = PBXBuildFile; fileRef = DB75E5151E9CD58100809B2D /* TiHero.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DBB66221208481A800EAD6D9 /* TitaniumKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB6621E2084819D00EAD6D9 /* TitaniumKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D33EEEF121C0F2A7006D3956 /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = platform/Hero.framework; sourceTree = "<group>"; };
+		3AB19B6228CF1E3800FA8E9D /* Hero.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Hero.xcframework; path = platform/Hero.xcframework; sourceTree = "<group>"; };
+		3AB19B6428CF1E9600FA8E9D /* TitaniumKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TitaniumKit.xcframework; path = "../../../../Library/Application Support/Titanium/mobilesdk/osx/11.1.0.GA/iphone/Frameworks/TitaniumKit.xcframework"; sourceTree = "<group>"; };
 		D34C63CA21C27789003EC011 /* TiUIView+Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TiUIView+Hero.swift"; path = "Classes/TiUIView+Hero.swift"; sourceTree = "<group>"; };
 		D3F7A37F21C52EB60096EE1E /* TiViewController+Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TiViewController+Hero.swift"; path = "Classes/TiViewController+Hero.swift"; sourceTree = "<group>"; };
 		DB34CDDE207B998A005F8E8C /* TiHeroModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiHeroModuleAssets.m; path = Classes/TiHeroModuleAssets.m; sourceTree = SOURCE_ROOT; };
@@ -39,23 +40,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBB66221208481A800EAD6D9 /* TitaniumKit.framework in Frameworks */,
+				3AB19B6528CF1E9600FA8E9D /* TitaniumKit.xcframework in Frameworks */,
 				DB34CDE6207B9EBD005F8E8C /* Foundation.framework in Frameworks */,
-				D33EEEF221C0F2A7006D3956 /* Hero.framework in Frameworks */,
+				3AB19B6328CF1E3800FA8E9D /* Hero.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D33EEEF021C0F20C006D3956 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				DBB6621E2084819D00EAD6D9 /* TitaniumKit.framework */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		DB258CA41F0964DE000D0D8D /* Misc */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +75,8 @@
 		DB34CDE2207B9D6A005F8E8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D33EEEF121C0F2A7006D3956 /* Hero.framework */,
+				3AB19B6428CF1E9600FA8E9D /* TitaniumKit.xcframework */,
+				3AB19B6228CF1E3800FA8E9D /* Hero.xcframework */,
 				DB34CDE5207B9EBD005F8E8C /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -94,7 +88,6 @@
 				DB52E22C1E9CCD7000AAAEE0 /* TiHero */,
 				DB52E22B1E9CCD7000AAAEE0 /* Products */,
 				DB34CDE2207B9D6A005F8E8C /* Frameworks */,
-				D33EEEF021C0F20C006D3956 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,21 +149,22 @@
 		DB52E2211E9CCD7000AAAEE0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					DB52E2291E9CCD7000AAAEE0 = {
 						CreatedOnToolsVersion = 8.3;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = DB52E2241E9CCD7000AAAEE0 /* Build configuration list for PBXProject "ti.hero" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = DB52E2201E9CCD7000AAAEE0;
 			productRefGroup = DB52E22B1E9CCD7000AAAEE0 /* Products */;
@@ -181,15 +175,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		DBB6621E2084819D00EAD6D9 /* TitaniumKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TitaniumKit.framework;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DB52E2281E9CCD7000AAAEE0 /* Resources */ = {
@@ -228,21 +213,31 @@
 			baseConfigurationReference = DB52E2411E9CD09900AAAEE0 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -270,7 +265,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -286,21 +281,31 @@
 			baseConfigurationReference = DB52E2411E9CD09900AAAEE0 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -323,7 +328,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
@@ -355,8 +361,12 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = (
 					"-DDEBUG",
@@ -369,9 +379,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcelerator.ti.hero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Titanium";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Debug;
@@ -398,8 +412,12 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = (
@@ -409,8 +427,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcelerator.ti.hero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Titanium";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Release;

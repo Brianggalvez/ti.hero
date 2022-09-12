@@ -13,15 +13,14 @@ public extension TiViewProxy
 {
     //TODO move to Proxy
     @objc(hero)
-    public var hero : Dictionary<String, Any> {
+    var hero : Dictionary<String, Any> {
         get{
             return self.value(forUndefinedKey: "hero") as! Dictionary<String, Any>
         }
         set {
-            NSLog("setting hero in TiViewProxy %@",newValue)
             let id = newValue["id"]
             if (id != nil) {
-                self.view.hero.id = id as! String;
+                self.view.hero.id = id as? String ?? UUID().uuidString;
             }
             let enabled = newValue["enabled"]
             if (enabled != nil) {
