@@ -2,17 +2,18 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 0.2.0
+version: 1.0.0
 apiversion: 2
-architectures: armv7 arm64 i386 x86_64
+architectures: arm64 x86_64
 description: ti.hero is a Swift based Titanium module.
 author: Your Name
 license: Specify your license
 copyright: Copyright (c) 2018 by Your Company
+mac: false
 
 # these should not be edited
 name: ti.hero
 moduleid: ti.hero
 guid: 483c6ba8-629d-46b1-8270-7589a3232dbc
 platform: iphone
-minsdk: 8.2.1.GA
+minsdk: 9.2.0

@@ -1,1 +1,6 @@
 build
+.DS_Store
+/ios/Carthage
+/ios/ti.hero.xcodeproj/xcuserdata/*.xcuserdatad
+/ios/ti.hero.xcodeproj/project.xcworkspace/xcuserdata/*.xcuserdatad
+/ios/dist
