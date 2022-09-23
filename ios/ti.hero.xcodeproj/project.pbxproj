@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3AB19B6328CF1E3800FA8E9D /* Hero.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB19B6228CF1E3800FA8E9D /* Hero.xcframework */; };
 		3AB19B6528CF1E9600FA8E9D /* TitaniumKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB19B6428CF1E9600FA8E9D /* TitaniumKit.xcframework */; };
 		D34C63CB21C27789003EC011 /* TiUIView+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34C63CA21C27789003EC011 /* TiUIView+Hero.swift */; };
+		D39297FC28D4E42500AD020A /* Hero.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39297FB28D4E42400AD020A /* Hero.xcframework */; };
 		D3F7A38021C52EB60096EE1E /* TiViewController+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7A37F21C52EB60096EE1E /* TiViewController+Hero.swift */; };
 		DB34CDE0207B998A005F8E8C /* TiHeroModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = DB34CDDE207B998A005F8E8C /* TiHeroModuleAssets.m */; };
 		DB34CDE1207B998A005F8E8C /* TiHeroModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = DB34CDDF207B998A005F8E8C /* TiHeroModuleAssets.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,9 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3AB19B6228CF1E3800FA8E9D /* Hero.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Hero.xcframework; path = platform/Hero.xcframework; sourceTree = "<group>"; };
 		3AB19B6428CF1E9600FA8E9D /* TitaniumKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TitaniumKit.xcframework; path = "../../../../Library/Application Support/Titanium/mobilesdk/osx/11.1.0.GA/iphone/Frameworks/TitaniumKit.xcframework"; sourceTree = "<group>"; };
 		D34C63CA21C27789003EC011 /* TiUIView+Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TiUIView+Hero.swift"; path = "Classes/TiUIView+Hero.swift"; sourceTree = "<group>"; };
+		D39297FB28D4E42400AD020A /* Hero.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Hero.xcframework; path = Carthage/Build/Hero.xcframework; sourceTree = "<group>"; };
 		D3F7A37F21C52EB60096EE1E /* TiViewController+Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TiViewController+Hero.swift"; path = "Classes/TiViewController+Hero.swift"; sourceTree = "<group>"; };
 		DB34CDDE207B998A005F8E8C /* TiHeroModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiHeroModuleAssets.m; path = Classes/TiHeroModuleAssets.m; sourceTree = SOURCE_ROOT; };
 		DB34CDDF207B998A005F8E8C /* TiHeroModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiHeroModuleAssets.h; path = Classes/TiHeroModuleAssets.h; sourceTree = SOURCE_ROOT; };
@@ -41,8 +41,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AB19B6528CF1E9600FA8E9D /* TitaniumKit.xcframework in Frameworks */,
+				D39297FC28D4E42500AD020A /* Hero.xcframework in Frameworks */,
 				DB34CDE6207B9EBD005F8E8C /* Foundation.framework in Frameworks */,
-				3AB19B6328CF1E3800FA8E9D /* Hero.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				3AB19B6428CF1E9600FA8E9D /* TitaniumKit.xcframework */,
-				3AB19B6228CF1E3800FA8E9D /* Hero.xcframework */,
+				D39297FB28D4E42400AD020A /* Hero.xcframework */,
 				DB34CDE5207B9EBD005F8E8C /* Foundation.framework */,
 			);
 			name = Frameworks;

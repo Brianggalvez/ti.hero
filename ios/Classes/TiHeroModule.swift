@@ -12,13 +12,12 @@ import TitaniumKit
 
 @objc(TiHeroModule)
 class TiHeroModule: TiModule {
-  
+
   func moduleGUID() -> String {
     return "483c6ba8-629d-46b1-8270-7589a3232dbc"
   }
-  
+
   override func moduleId() -> String! {
     return "ti.hero"
   }
 }
-

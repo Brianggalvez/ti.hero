@@ -1,33 +1,46 @@
-var win = Ti.UI.createWindow({
-  backgroundColor: 'white'
-  // hero: { enabled: true }
-})
-var label = Ti.UI.createLabel()
-var view = Ti.UI.createView({
-  hero: { id: 'redView' },
+//working animations: fade, zoom zoomOut
+
+function createModal() {
+  const modal = Ti.UI.createWindow({
+    backgroundColor: "white",
+    hero: { enabled: true, presenting: "zoom", dismissing: "zoomOut" },
+    modal: true,
+  });
+  const viewModal = Ti.UI.createView({
+    hero: { id: "redView" },
+    height: 150,
+    width: 150,
+    top: 50,
+    backgroundColor: "red",
+  });
+  modal.add(viewModal);
+  return modal;
+}
+
+const win = Ti.UI.createWindow({
+  backgroundColor: "white",
+});
+
+const navigationWindow = Ti.UI.createNavigationWindow({
+  window: win,
+});
+
+const label = Ti.UI.createLabel();
+
+const view = Ti.UI.createView({
+  hero: { id: "redView" },
   height: 50,
   width: 50,
-  backgroundColor: 'red'
-})
-win.add(label)
-win.add(view)
-win.open()
+  backgroundColor: "red",
+});
 
-var modal = Ti.UI.createWindow({
-  backgroundColor: 'white',
-  hero: { enabled: true },
-  modal: true
-})
-var viewModal = Ti.UI.createView({
-  hero: { id: 'redView' },
-  height: 50,
-  width: 50,
-  top: 50,
-  backgroundColor: 'red'
-})
+win.add(label);
+win.add(view);
 
-modal.add(viewModal)
-view.addEventListener('click', () => {
-  modal.open({ modal: true })
-  setTimeout(modal.close, 2000)
-})
+view.addEventListener("click", () => {
+  const modalWindow = createModal();
+  modalWindow.open();
+  //navigationWindow.openWindow(modalWindow);
+  setTimeout(modalWindow.close, 2000);
+});
+navigationWindow.open();

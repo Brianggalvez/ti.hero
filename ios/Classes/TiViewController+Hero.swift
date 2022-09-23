@@ -8,35 +8,42 @@ import Foundation
 import TitaniumKit
 import Hero
 
-public extension TiWindowProxy
-{
-    //TODO move to Proxy
+public extension TiWindowProxy {
+    // TODO move to Proxy
     @objc(hero)
-    override var hero : Dictionary<String, Any> {
-        get{
-            return self.value(forUndefinedKey: "hero") as! Dictionary<String, Any>
+    override var hero: [String: Any] {
+        get {
+            return self.value(forUndefinedKey: "hero") as! [String: Any]
         }
         set {
             // enabling hero in navigationWindowController through child win until the header can be imported
-            NSLog("setting hero in TiWindowProxy %@",newValue)
-            let enabled = newValue["enabled"];
-            if((self.hostingController().navigationController) != nil){
-                if (enabled != nil) {
-                    self.hostingController().navigationController?.hero.isEnabled = enabled  as! Bool;
+            let enabled = newValue["enabled"]
+            let presentingName = newValue["presenting"] as? String ?? "zoom"
+            let dismissingName = newValue["dismissing"] as? String ?? "zoom"
+            let presentingAnimation = HeroDefaultAnimationType.from(node: ExprNode(name: presentingName )) ?? .fade
+            let dismissingAnimation = HeroDefaultAnimationType.from(node: ExprNode(name: dismissingName )) ?? .fade
+
+            if (self.hostingController().navigationController) != nil {
+                if enabled != nil {
+                    self.hostingController().navigationController?.hero.isEnabled = enabled  as! Bool
                 }
-                self.hostingController().navigationController?.hero.navigationAnimationType = .selectBy(presenting:.fade, dismissing:.fade)
+                NSLog("animating hero in TiWindowProxy %@", newValue)
+                self.hostingController().navigationController?.hero.navigationAnimationType = .selectBy(presenting: presentingAnimation.self, dismissing: dismissingAnimation.self)
+
             } else {
-                NSLog("set modal in setter %@",self.hostingController());
-                if (enabled != nil) {
-                    self.hostingController().hero.isEnabled = enabled  as! Bool;
+                NSLog("set modal in setter %@", self.hostingController())
+                if enabled != nil {
+                    self.hostingController().hero.isEnabled = enabled  as! Bool
                 }
-                //self.hostingController().hero.modalAnimationType = .selectBy(presenting:.fade, dismissing:.zoomOut)
+                self.hostingController().navigationController?.hero.modalAnimationType = .selectBy(presenting: presentingAnimation, dismissing: dismissingAnimation)
+                self.hostingController().hero.modalAnimationType = .selectBy(presenting: presentingAnimation.self, dismissing: dismissingAnimation.self)
+
             }
             self.replaceValue(newValue, forKey: "hero", notification: false)
-            
+
         }
     }
-    
+
 }
 
 /*public extension TiUINavigationWindowProxy
@@ -54,5 +61,3 @@ public extension TiWindowProxy
     }
     
 }*/
-
-
